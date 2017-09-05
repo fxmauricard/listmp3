@@ -3,6 +3,8 @@
  *  M. MAURICARD Francois-Xavier Pascal - 29/03/2006
  */
 
+package listmp3;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.lang.String;

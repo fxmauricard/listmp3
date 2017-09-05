@@ -3,6 +3,8 @@
  *  M. MAURICARD Francois-Xavier Pascal - 29/03/2006
  */
 
+package listmp3;
+
 public class DirectoryStatistics extends Object
 {
 	// Attributes.
