@@ -5,7 +5,7 @@
     <groupId>com.fxmauricard</groupId>
     <artifactId>listmp3</artifactId>
     <packaging>jar</packaging>
-    <version>0.36</version>
+    <version>0.40</version>
 
     <build>
         <plugins>
