@@ -11,4 +11,4 @@ I thought I could enhanced it to be a quick and simple media library.
 
 ## Conclusion
 
-This project left unfinished, as reading ID3 tags was a big deal and I still had to focus on other school projects.
+This project left unfinished, as reading ID3v2 tags was a big deal and I still had to focus on other school projects.
