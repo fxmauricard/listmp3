@@ -1,9 +1,9 @@
 /*
  *  file DirectoryStatistics.java
- *  M. MAURICARD Francois-Xavier Pascal - 28/03/2006
+ *  M. MAURICARD Francois-Xavier Pascal - 29/03/2006
  */
- 
- public class DirectoryStatistics extends Object
+
+public class DirectoryStatistics extends Object
 {
 	// Attributes.
 	public int file_count;
@@ -23,5 +23,9 @@
 	{
 		this.file_count += ds.file_count;
 		this.directory_size += ds.directory_size;
+		if (this.cover_name == "")
+		{
+			this.cover_name = ds.cover_name;
+		}
 	}
 }

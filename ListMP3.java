@@ -1,15 +1,16 @@
 /*
  *  file ListMP3.java
- *  M. MAURICARD Francois-Xavier Pascal - 28/03/2006
+ *  M. MAURICARD Francois-Xavier Pascal - 29/03/2006
  */
 
 import java.io.File;
 import java.io.FileWriter;
 import java.lang.String;
+import java.lang.StringBuffer;
 
-class ListMP3
+public class ListMP3
 {
-	final static String VERSION = "v0.35-stable_20060328";
+	final static String VERSION = "v0.36-stable_20060329";
 	static boolean even = false;
 
 	public static void main (String[] args)
@@ -90,7 +91,7 @@ class ListMP3
 				boolean containsMP3 = false;
 
 				// Search if the current directory contains a MP3.
-				for(int i = 0 ; i < files.length && !containsMP3 ; i++)
+				for (int i = 0 ; i < files.length && !containsMP3 ; i++)
 				{
 					String filename = files[i].getName();
 
@@ -137,7 +138,22 @@ class ListMP3
 						{
 							writeLine(output, "\t\t\t<img class=\"cover\" src=\"folder.png\" alt=\"album cover\" height=\"96\" width=\"96\" />\n");
 						}
-						writeLine(output, "\t\t\t<div class=\"album\">" + f.toString().substring(parent.toString().length() + root) + "</div>\n");
+
+						// Creating directory name with HTML entities support.
+						String album_name_buffer = f.toString().substring(parent.toString().length() + root);
+						StringBuffer album_name = new StringBuffer();
+						for (char c: album_name_buffer.toCharArray())
+						{
+							if (!Character.isLetterOrDigit(c))
+							{
+								album_name.append(String.format("&#x%x;", (int) c));
+							}
+							else
+							{
+								album_name.append(c);
+							}
+						}
+						writeLine(output, "\t\t\t<div class=\"album\">" + album_name + "</div>\n");
 						writeLine(output, "\t\t\t<div class=\"tracks\">" + ds.file_count + " tracks</div>\n");
 						writeLine(output, "\t\t\t<div class=\"infos\">Year ????<br />" + ds.directory_size / 1048576 + " MB</div>\n");
 						writeLine(output, "\t\t</div>\n");
