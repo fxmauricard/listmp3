@@ -24,10 +24,12 @@ Usage : java ListMP3 {-option} [directory] ...
 
 ````
 
-**Screenshot of the tool on the CLI**<br>
+**Screenshot of the tool on the CLI:**
+
 ![Screenshot of the ListMP3 tool on the CLI](https://github.com/fxmauricard/listmp3/blob/master/ListMP3-screenshot-CLI.png)
 
-**Screenshot of the report made**<br>
+**Screenshot of the report made:**
+
 ![Screenshot of the report made by ListMP3](https://github.com/fxmauricard/listmp3/blob/master/ListMP3-screenshot-Report.png)
 
 ## Conclusion
